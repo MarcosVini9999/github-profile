@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch } from "@/components";
-import { HeaderContainer } from "./PageHeader.style";
-import { Link } from "react-router-dom";
+import { HeaderContainer, LogoLink } from "./PageHeader.style";
 import { ThemeContext } from "@/contexts";
 import { useTheme } from "@mui/material/styles";
 
@@ -11,9 +10,9 @@ export const PageHeader: React.FC = () => {
 
   return (
     <HeaderContainer sx={{ backgroundColor: theme.palette.background.default }}>
-      <Link to="/" id="logo">
+      <LogoLink to="/" id="logo" sx={{ color: theme.palette.text.primary }}>
         Github Profiles
-      </Link>
+      </LogoLink>
       <Switch onClick={toggleTheme} />
     </HeaderContainer>
   );
