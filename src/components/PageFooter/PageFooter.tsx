@@ -1,20 +1,24 @@
-import { Typography } from "@mui/material";
 import React from "react";
+import { Button } from "@mui/material";
 import { FooterContainer, FooterDescription } from "./PageFooter.style";
+import { useTheme } from "@mui/material/styles";
+import { UserNameContext } from "@/contexts";
 
 export const PageFooter: React.FC = () => {
+  const theme = useTheme();
+  const { postUserName } = React.useContext(UserNameContext);
+
   return (
-    <FooterContainer>
+    <FooterContainer sx={{ backgroundColor: theme.palette.background.default }}>
       <FooterDescription>
-        <p>Developed</p>
-        <p>by</p>
-        <a
-          href="https://github.com/MarcosVini9999"
-          target="_blank"
-          rel="noreferrer"
+        <Button
+          onClick={() => {
+            postUserName("MarcosVini9999");
+          }}
+          variant="outlined"
         >
           Marcos Vinicius
-        </a>
+        </Button>
       </FooterDescription>
     </FooterContainer>
   );
