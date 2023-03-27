@@ -1,7 +1,7 @@
 import { UserMenu } from "@/components";
 import { UserNameContext } from "@/contexts";
 import React from "react";
-import { HomeContainer } from "./Home.style";
+import { HomeContainer, UserSummary } from "./Home.style";
 
 export const Home: React.FC = () => {
   const { usersData } = React.useContext(UserNameContext);
@@ -9,7 +9,7 @@ export const Home: React.FC = () => {
   console.log("renderizou");
   return (
     <HomeContainer>
-      <div>
+      <UserSummary>
         <img src={usersData?.avatar_url} alt="user_image" />
         <p>{usersData?.name}</p>
         <p>{usersData?.login}</p>
@@ -18,7 +18,10 @@ export const Home: React.FC = () => {
         <p>followers: {usersData?.followers}</p>
         <p>following: {usersData?.following}</p>
         <p>starred: {usersData?.stars}</p>
-      </div>
+        <a href={usersData?.html_url} target="_blank">
+          GitHub Page
+        </a>
+      </UserSummary>
       <UserMenu />
     </HomeContainer>
   );

@@ -9,3 +9,4 @@ export { UsersList } from "./UsersList/UsersList";
 export { UserCard } from "./UserCard/UserCard";
 export { RepositoryList } from "./RepositoryList/RepositoryList";
 export { RepositoryCard } from "./RepositoryCard/RepositoryCard";
+export { Switch } from "./Switch/Switch";
