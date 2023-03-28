@@ -23,12 +23,10 @@ export const themeColors = (mode: "dark" | "light") =>
           ? {
               primary: "#EFEFEF",
               secondary: "#C5C5C5",
-              tertiary: "#787878",
             }
           : {
               primary: "#0D1117",
               secondary: "#1D2227",
-              tertiary: "#787878",
             }),
       },
     },

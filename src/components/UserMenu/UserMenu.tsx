@@ -1,6 +1,6 @@
 import React from "react";
 import { RepositoryList, UserMenuButton, UsersList } from "@/components";
-import { UserMenuContainer } from "./UserMenu.style";
+import { UserMenuContainer, UserMenuController } from "./UserMenu.style";
 import { UserNameContext } from "@/contexts";
 
 export const UserMenu: React.FC = () => {
@@ -15,7 +15,7 @@ export const UserMenu: React.FC = () => {
 
   return (
     <UserMenuContainer>
-      <div>
+      <UserMenuController>
         {userMenuOptions.map((option) => (
           <UserMenuButton
             value={option}
@@ -23,7 +23,7 @@ export const UserMenu: React.FC = () => {
             key={userMenuOptionsKeyCounter++}
           />
         ))}
-      </div>
+      </UserMenuController>
       <div>
         {userMenu === userMenuOptions[0] ? (
           <RepositoryList repositories={usersData?.repos_list} />

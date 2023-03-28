@@ -15,6 +15,7 @@ export const UserMenuButton: React.FC<UserMenuButtonProps> = ({
       onClick={() => {
         onClick(value);
       }}
+      variant="contained"
     >
       {value}
     </UserMenuButtonContainer>
