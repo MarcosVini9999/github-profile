@@ -9,9 +9,8 @@ export const Home: React.FC = () => {
   const { usersData } = React.useContext(UserNameContext);
   const theme = useTheme();
 
-  console.log("renderizou");
   return (
-    <HomeContainer>
+    <HomeContainer sx={{ backgroundColor: theme.palette.background.paper }}>
       <UserSummary>
         <img src={usersData?.avatar_url} alt="user_image" />
         <Typography>{usersData?.name}</Typography>

@@ -5,20 +5,19 @@ export const HomeContainer = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  "& div": {
-    width: "100%",
-  },
-  "@media (min-width: 768px)": {
+  alignItems: "center",
+  "@media (min-width: 992px)": {
     flexDirection: "row",
   },
 });
 
 export const UserSummary = styled("div")({
+  width: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   textAlign: "center",
-  "@media (min-width: 768px)": {},
+  marginBlock: "20px",
   "& img": {
     width: "50%",
     borderRadius: "50%",
