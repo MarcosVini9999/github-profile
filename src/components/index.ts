@@ -10,3 +10,4 @@ export { UserCard } from "./UserCard/UserCard";
 export { RepositoryList } from "./RepositoryList/RepositoryList";
 export { RepositoryCard } from "./RepositoryCard/RepositoryCard";
 export { Switch } from "./Switch/Switch";
+export { Loading } from "./Loading/Loading";

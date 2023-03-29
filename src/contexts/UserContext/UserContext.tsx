@@ -3,12 +3,18 @@ import apiGithub from "@/services/apiGithub";
 import React from "react";
 
 interface UserNameContextProps {
-  usersData?: UserData;
+  usersData: UserData;
   postUserName: (userName: string) => void;
+  loading: Loading;
 }
 
 interface UserNameProviderProps {
   children: React.ReactNode;
+}
+
+interface Loading {
+  search: boolean;
+  error: boolean;
 }
 
 export const UserNameContext = React.createContext({} as UserNameContextProps);
@@ -16,9 +22,18 @@ export const UserNameContext = React.createContext({} as UserNameContextProps);
 export const UserNameProvider: React.FC<UserNameProviderProps> = ({
   children,
 }) => {
-  const [usersData, setUsersData] = React.useState<UserData>();
+  const [data, setData] = React.useState({} as UserData);
+  const [loading, setLoading] = React.useState<Loading>({
+    search: false,
+    error: false,
+  });
+  const usersData: UserData = React.useMemo(() => data, [data]);
 
   const fetchData = async (userName: string) => {
+    setLoading({
+      search: true,
+      error: false,
+    });
     try {
       const result = await apiGithub.get(`/users/${userName}`);
       const stars = await apiGithub.get(`/users/${userName}/starred`);
@@ -33,9 +48,16 @@ export const UserNameProvider: React.FC<UserNameProviderProps> = ({
         followers_list: followers.data,
         following_list: following.data,
       };
-      setUsersData(userData);
+      setData(userData);
     } catch (e) {
       console.log(e);
+      setLoading({
+        search: false,
+        error: true,
+      });
+      setData({} as UserData);
+    } finally {
+      setLoading((oldStatus) => ({ ...oldStatus, search: false }));
     }
   };
 
@@ -48,6 +70,7 @@ export const UserNameProvider: React.FC<UserNameProviderProps> = ({
       value={{
         usersData,
         postUserName,
+        loading,
       }}
     >
       {children}
