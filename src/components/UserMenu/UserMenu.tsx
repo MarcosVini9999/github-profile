@@ -7,7 +7,6 @@ export const UserMenu: React.FC = () => {
   const userMenuOptions = ["Repositories", "Followers", "Following", "Stars"];
   const [userMenu, setUserMenu] = React.useState<string>("Repositories");
   const { usersData } = React.useContext(UserNameContext);
-  let userMenuOptionsKeyCounter = 0;
 
   const handleUserMenu = (value: string) => {
     setUserMenu(value);
@@ -16,12 +15,8 @@ export const UserMenu: React.FC = () => {
   return (
     <UserMenuContainer>
       <UserMenuController>
-        {userMenuOptions.map((option) => (
-          <UserMenuButton
-            value={option}
-            onClick={handleUserMenu}
-            key={userMenuOptionsKeyCounter++}
-          />
+        {userMenuOptions.map((option, index) => (
+          <UserMenuButton value={option} onClick={handleUserMenu} key={index} />
         ))}
       </UserMenuController>
       <div>

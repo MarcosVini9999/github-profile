@@ -12,7 +12,6 @@ export const RepositoryList: React.FC<RepositoryListProps> = ({
   repositories,
 }) => {
   const theme = useTheme();
-  let repositoryCounter = 0;
 
   return (
     <RepositoryListContainer
@@ -21,8 +20,8 @@ export const RepositoryList: React.FC<RepositoryListProps> = ({
         boxShadow: `${theme.palette.background.paper} 0px 30px 60px -12px inset, ${theme.palette.background.paper} 0px 18px 36px -18px inset`,
       }}
     >
-      {repositories?.map((repository) => (
-        <RepositoryCard repository={repository} key={repositoryCounter++} />
+      {repositories?.map((repository, index) => (
+        <RepositoryCard repository={repository} key={index} />
       ))}
     </RepositoryListContainer>
   );

@@ -10,7 +10,6 @@ interface UsersListProps {
 
 export const UsersList: React.FC<UsersListProps> = ({ users }) => {
   const theme = useTheme();
-  let userCardCounter = 0;
 
   return (
     <UsersListContainer
@@ -19,8 +18,8 @@ export const UsersList: React.FC<UsersListProps> = ({ users }) => {
         boxShadow: `${theme.palette.background.paper} 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset`,
       }}
     >
-      {users?.map((user) => (
-        <UserCard user={user} key={userCardCounter++} />
+      {users?.map((user, index) => (
+        <UserCard user={user} key={index} />
       ))}
     </UsersListContainer>
   );
