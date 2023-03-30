@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
     <HomeContainer sx={{ backgroundColor: theme.palette.background.paper }}>
       {loading.search ? (
         <Loading />
-      ) : usersData?.name ? (
+      ) : usersData?.login ? (
         <React.Fragment>
           <UserSummary>
             <img src={usersData?.avatar_url} alt="user_image" />
