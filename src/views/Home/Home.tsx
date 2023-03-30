@@ -9,8 +9,6 @@ export const Home: React.FC = () => {
   const { usersData, loading } = React.useContext(UserNameContext);
   const theme = useTheme();
 
-  console.log("carregou");
-
   return (
     <HomeContainer sx={{ backgroundColor: theme.palette.background.paper }}>
       {loading.search ? (

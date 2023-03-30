@@ -5,4 +5,5 @@ export const UserMenuButtonContainer = styled(Button)({
   borderBottomLeftRadius: "0px",
   borderBottomRightRadius: "0px",
   width: "120px",
+  margin: "5px",
 });

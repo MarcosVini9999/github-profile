@@ -16,7 +16,12 @@ export const UserMenu: React.FC = () => {
     <UserMenuContainer>
       <UserMenuController>
         {userMenuOptions.map((option, index) => (
-          <UserMenuButton value={option} onClick={handleUserMenu} key={index} />
+          <UserMenuButton
+            value={option}
+            onClick={handleUserMenu}
+            key={index}
+            selected={userMenu === option}
+          />
         ))}
       </UserMenuController>
       <div>
