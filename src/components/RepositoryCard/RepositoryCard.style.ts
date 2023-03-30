@@ -6,6 +6,8 @@ export const RepositoryCardContainer = styled(Box)({
   justifyContent: "flex-start",
   flexDirection: "column",
   padding: "20px",
+  inlineSize: "auto",
+  overflowWrap: "break-word",
   "&:hover": {
     backgroundColor: "#5F30E5",
     cursor: "pointer",
