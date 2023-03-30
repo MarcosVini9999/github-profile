@@ -5,6 +5,6 @@ export const RepositoryListContainer = styled(Box)({
   overflowY: "scroll",
   height: "400px",
   "@media (min-height: 640px)": {
-    height: "300px",
+    height: "500px",
   },
 });
