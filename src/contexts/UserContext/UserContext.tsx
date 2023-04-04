@@ -35,11 +35,11 @@ export const UserNameProvider: React.FC<UserNameProviderProps> = ({
       error: false,
     });
     try {
-      const result = await apiGithub.get(`/users/${userName}`);
-      const stars = await apiGithub.get(`/users/${userName}/starred`);
-      const repos = await apiGithub.get(`/users/${userName}/repos`);
-      const followers = await apiGithub.get(`/users/${userName}/followers`);
-      const following = await apiGithub.get(`/users/${userName}/following`);
+      const result = await apiGithub.get(`/${userName}`);
+      const stars = await apiGithub.get(`/${userName}/starred`);
+      const repos = await apiGithub.get(`/${userName}/repos`);
+      const followers = await apiGithub.get(`/${userName}/followers`);
+      const following = await apiGithub.get(`/${userName}/following`);
       const userData = {
         ...result.data,
         stars: stars.data.length,
