@@ -1,8 +1,7 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { Router } from "@/components";
 import { ThemeProvider } from "@/contexts";
-import "./index.css";
+import "@/assets/css/index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <ThemeProvider>
