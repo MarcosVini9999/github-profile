@@ -11,9 +11,7 @@ export const SearchBar: React.FC = () => {
   const [userName, setUserName] = React.useState<string>("");
 
   const keyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      postUserName(userName);
-    }
+    if (event.key === "Enter") postUserName(userName);
   };
 
   return (
