@@ -2,7 +2,7 @@ import React from "react";
 import { LoadingContainer } from "./Loading.style";
 
 export const Loading: React.FC = () => {
-  const loading = ["l", "o", "a", "d", "i", "n", "g", "."];
+  const loading = ["l", "o", "a", "d", "i", "n", "g"];
 
   return (
     <LoadingContainer>

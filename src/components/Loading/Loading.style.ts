@@ -5,17 +5,16 @@ export const LoadingContainer = styled("div")({
     position: "relative",
     display: "inline-block",
     fontSize: "40px",
-    color: "#fff",
     textTransform: "uppercase",
     animation: "flip 2s infinite",
     animationDelay: "calc(.2s * var(--i))",
   },
   "@keyframes flip": {
     "0%": {
-      transform: "rotateY(0deg)",
+      transform: "rotate(0deg)",
     },
-    "80%": {
-      transform: "rotateY(360deg)",
+    "100%": {
+      transform: "rotate(360deg)",
     },
   },
 });
