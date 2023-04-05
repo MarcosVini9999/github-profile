@@ -1,8 +1,8 @@
+import React from "react";
+import { RepositoryCardContainer } from "./RepositoryCard.style";
 import { Repo } from "@/config/interfaces/IUserData";
 import { formatedDate } from "@/utils/date";
 import { Typography, useTheme } from "@mui/material";
-import React from "react";
-import { RepositoryCardContainer } from "./RepositoryCard.style";
 
 interface RepositoryCardProps {
   repository: Repo;

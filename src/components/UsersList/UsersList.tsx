@@ -1,7 +1,7 @@
-import { UserData } from "@/config/interfaces/IUserData";
 import React from "react";
-import { UserCard } from "@/components";
 import { UsersListContainer } from "./UsersList.style";
+import { UserData } from "@/config/interfaces/IUserData";
+import { UserCard } from "@/components";
 import { useTheme } from "@mui/material/styles";
 
 interface UsersListProps {

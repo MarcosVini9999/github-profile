@@ -1,6 +1,6 @@
 import React from "react";
-import { Switch } from "@/components";
 import { HeaderContainer, LogoLink } from "./PageHeader.style";
+import { Switch } from "@/components";
 import { ThemeContext } from "@/contexts";
 import { useTheme } from "@mui/material/styles";
 

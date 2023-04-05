@@ -1,6 +1,6 @@
+import React from "react";
 import { UserData } from "@/config/interfaces/IUserData";
 import apiGithub from "@/services/apiGithub";
-import React from "react";
 
 interface UserNameContextProps {
   usersData: UserData;

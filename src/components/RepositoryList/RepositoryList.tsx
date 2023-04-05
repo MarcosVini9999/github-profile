@@ -1,7 +1,7 @@
-import { Repo } from "@/config/interfaces/IUserData";
 import React from "react";
-import { RepositoryCard } from "@/components";
 import { RepositoryListContainer } from "./RepositoryList.style";
+import { Repo } from "@/config/interfaces/IUserData";
+import { RepositoryCard } from "@/components";
 import { useTheme } from "@mui/material/styles";
 
 interface RepositoryListProps {

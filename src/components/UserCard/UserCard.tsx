@@ -1,9 +1,9 @@
+import React from "react";
+import Typography from "@mui/material/Typography";
+import { UserCardContainer, UserImg } from "./UserCard.style";
 import { UserData } from "@/config/interfaces/IUserData";
 import { UserNameContext } from "@/contexts";
 import { useTheme } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import React from "react";
-import { UserCardContainer, UserImg } from "./UserCard.style";
 
 interface UserCardProps {
   user: UserData;

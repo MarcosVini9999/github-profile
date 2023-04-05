@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "@mui/material";
 import { FooterContainer, FooterDescription } from "./PageFooter.style";
+import { Button } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { UserNameContext } from "@/contexts";
 

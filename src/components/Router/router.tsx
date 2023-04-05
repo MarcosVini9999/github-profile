@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DefaultPageLayout } from "@/components";
 import { Home } from "@/views";
 import { ThemeContext, UserNameProvider } from "@/contexts";
