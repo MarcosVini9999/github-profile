@@ -12,6 +12,10 @@
 - Axios
 - Github API
 
+## 📖Notion Page
+- <a href="https://royal-wave-4c0.notion.site/Consumindo-a-API-do-Github-com-React-III-SECS-a54d9c416d6b4ea9b0752289b5c5f41a">Consumindo a API do Github com React - III SECS</a>
+
+
 ## ❓ How to Install and Run the Project
 
 - To clone the repository type the following command in the terminal in the location you want:
